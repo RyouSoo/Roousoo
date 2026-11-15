@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Jua", "Noto Sans KR", sans-serif;
+    --font-body: "Noto Sans KR", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #fff8eb;
+    color: #451a03;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Warm bright pixel-art frame & bevel utilities */
+.pixel-panel {
+  background-color: #fffdf6;
+  border: 3px solid #5c2d0c;
+  box-shadow:
+    inset 0 3px 0 #ffffff,
+    inset 0 -3px 0 #f3e3c3,
+    4px 4px 0 #5c2d0c;
+}
+
+.pixel-panel-warm {
+  background-color: #fef3c7;
+  border: 3px solid #5c2d0c;
+  box-shadow:
+    inset 0 3px 0 #fffbeb,
+    inset 0 -3px 0 #fde68a,
+    4px 4px 0 #5c2d0c;
+}
+
+.pixel-btn {
+  border: 3px solid #5c2d0c;
+  box-shadow:
+    inset 0 3px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.14),
+    0 4px 0 #5c2d0c;
+  transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.1s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.15s ease;
+}
+
+.pixel-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 3px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.14),
+    0 5px 0 #5c2d0c;
+}
+
+.pixel-btn:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 1px 0 #5c2d0c;
+}
+
+.pixel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pixel-input {
+  background-color: #fffef9;
+  border: 3px solid #5c2d0c;
+  box-shadow: inset 0 3px 0 #f1e4cb;
+}
+
+.pixel-input:focus {
+  outline: none;
+  border-color: #d97706;
+  box-shadow:
+    inset 0 3px 0 #fef3c7,
+    0 0 0 3px rgba(245, 158, 11, 0.35);
+}
+
+.pixel-card-item {
+  border: 2px solid #78350f;
+  box-shadow: 3px 3px 0 #78350f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-btn {
+    transition: none;
+  }
+}

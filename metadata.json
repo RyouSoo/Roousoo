@@ -1,0 +1,6 @@
+{
+  "name": "분수 마을 탐험대",
+  "description": "Three.js 기반 초등학교 5학년 분수의 곱셈 3D 픽셀 아트 마을 학습 게임",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
